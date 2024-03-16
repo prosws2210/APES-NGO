@@ -97,7 +97,7 @@ const ContactForm = () => {
                   <div className='pb-7'>
                     <div className="flex items-center space-x-4">
                         {/* STARS 1 */}
-                        <p className="text-gray-800 text-md font-semibold">Rate our service:</p>
+                        <p className="text-gray-800 text-md font-semibold">Rate our whole services:</p>
                         <div className="flex justify-center items-center mb-2">
                             <Rating
                                 name="half-rating"
@@ -111,7 +111,7 @@ const ContactForm = () => {
                     </div>
                     <div className="flex items-center space-x-4">
                         {/* STARS 1 */}
-                        <p className="text-gray-800 text-md font-semibold">Rate our service:</p>
+                        <p className="text-gray-800 text-md font-semibold">Rate our service (HEALTHCARE): &nbsp;&nbsp;</p>
                         <div className="flex justify-center items-center mb-2">
                             <Rating
                                 name="half-rating"
@@ -125,7 +125,7 @@ const ContactForm = () => {
                     </div>
                     <div className="flex items-center space-x-4">
                         {/* STARS 1 */}
-                        <p className="text-gray-800 text-md font-semibold">Rate our service:</p>
+                        <p className="text-gray-800 text-md font-semibold">Rate our service (EDUCATION): &nbsp;&nbsp;&nbsp;&nbsp;</p>
                         <div className="flex justify-center items-center mb-2">
                             <Rating
                                 name="half-rating"
@@ -139,7 +139,7 @@ const ContactForm = () => {
                     </div>
                     <div className="flex items-center space-x-4">
                         {/* STARS 1 */}
-                        <p className="text-gray-800 text-md font-semibold">Rate our service:</p>
+                        <p className="text-gray-800 text-md font-semibold">Rate our service (FOOD): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                         <div className="flex justify-center items-center mb-2">
                             <Rating
                                 name="half-rating"
@@ -153,7 +153,7 @@ const ContactForm = () => {
                     </div>
                     <div className="flex items-center space-x-4">
                         {/* STARS 1 */}
-                        <p className="text-gray-800 text-md font-semibold">Rate our service:</p>
+                        <p className="text-gray-800 text-md font-semibold">Rate our service (SOCIAL CAUSE):</p>
                         <div className="flex justify-center items-center mb-2">
                             <Rating
                                 name="half-rating"
@@ -167,7 +167,7 @@ const ContactForm = () => {
                     </div>
                     <div className="flex items-center space-x-4">
                         {/* STARS 1 */}
-                        <p className="text-gray-800 text-md font-semibold">Rate our service:</p>
+                        <p className="text-gray-800 text-md font-semibold">Rate our service (EVENTS): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                         <div className="flex justify-center items-center mb-2">
                             <Rating
                                 name="half-rating"
@@ -198,7 +198,9 @@ const ContactForm = () => {
               </div>
 
               {/* Submit Button */}
-              <button className="bg-blue-500 hover:bg-blue-700 font-bold text-white py-2 px-4 rounded-2xl">Submit Suggestion</button>
+              <div className='pt-2'>
+                <button className="bg-blue-500 hover:bg-blue-700 font-bold text-white py-2 px-4 rounded-2xl">Submit Suggestion</button>
+              </div>
               </div>
           </div>
 
