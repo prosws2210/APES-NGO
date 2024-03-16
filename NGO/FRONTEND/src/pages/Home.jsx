@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Home_Main from "../components/Home/Home_Main";
+import HomeSlider from "../components/Home/Home_Slider";
 import Home_Components from "../components/Home/Home_Components";
 import Home_Count from "../components/Home/Home_Count";
 import Home_KeyFeatures from "../components/Home/Home_KeyFeatures";
@@ -11,7 +11,7 @@ const Home = () => {
 	return (
 		<div>
 			<Navbar />
-			<Home_Main />
+			<HomeSlider />
 			<Home_Components />
 			<Home_Count />
 			<Home_KeyFeatures />
