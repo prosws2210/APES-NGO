@@ -72,10 +72,6 @@ const Footer = () => {
 				<div className="w-4/12">
 					<h2 className="font-bold text-xl">Useful Links</h2>
 					<div className="flex flex-col gap-2 mt-3">
-						{/* <Link to="/" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
-							<p>Home</p>
-							<MdOutlineKeyboardArrowRight className="text-2xl" />
-						</Link> */}
 						<Link to="http://localhost:1001/" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
 							<p>Health-care Support</p>
 							<MdOutlineKeyboardArrowRight className="text-2xl" />
@@ -100,23 +96,23 @@ const Footer = () => {
 					<div className="text-sm italic mt-3">
 						<div className="flex flex-row justify-between">
 							<div className="flex flex-col">
-								<div className="flex justify-between gap-2">
+								<div className="flex justify-between gap-4">
 									<div>Anushka Mohan</div>
-									<div>(22BRS1181)</div>
+									<div>(22BCE5081)</div>
 								</div>
-								<div className="flex justify-between gap-2">
+								<div className="flex justify-between gap-4">
 									<div>Eliksha Maheshwari</div>
 									<div>(22BAI1312)</div>
 								</div>
 							</div>
 							<div className="flex flex-col">
-								<div className="flex justify-between gap-2">
+								<div className="flex justify-between gap-4">
 									<div>Paridhi Rathore</div>
-									<div>(22BAI1012)</div>
+									<div>(22BCE1581)</div>
 								</div>
-								<div className="flex justify-between gap-2">
+								<div className="flex justify-between gap-4">
 									<div>Shakti Swaroop Sahu</div>
-									<div>(22BAI1023)</div>
+									<div>(22BAI1012)</div>
 								</div>
 							</div>
 						</div>

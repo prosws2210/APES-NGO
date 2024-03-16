@@ -19,10 +19,10 @@ export default function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/About" element={<About />} />
-					<Route path="/Donation" element={<Donation />} />
 					<Route path="/Contact" element={<Contact />} />
 					<Route path="/Login" element={<Login />} />
 					<Route path="/Register" element={<Register />} />
+					<Route path="/Donation" element={<Donation />} />
 				</Routes>
 			</Router>
 		</div>
