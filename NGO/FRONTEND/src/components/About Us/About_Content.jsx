@@ -17,26 +17,21 @@ const About_Content = () => {
 
       {/* Text on the right */}
       <div className="max-w">
-        <h2 className="text-2xl font-bold mb-4">Welcome to JIPMER - Advancing Healthcare Excellence</h2>
+        <h2 className="text-2xl font-bold mb-4">Welcome to APES NGO - Empowering Communities, Advancing Change</h2>
         <p className="text-gray-700">
-          JIPMER, a pioneer in medical education, stands as a beacon of quality healthcare and academic brilliance.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida.
-          Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.
+          At APES NGO, we are dedicated to fostering positive change and sustainable development within communities worldwide. Our commitment to advancing social and environmental causes is unwavering, as we strive to create a better future for all.
         </p>
 
         <p className="mt-4 text-gray-700">
-          Our commitment to advancing medical knowledge and providing top-notch healthcare services is reflected in our
-          state-of-the-art facilities and a team of dedicated professionals. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna
-          sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.
+          Through our relentless efforts, we stand as a beacon of hope, driving impactful initiatives that empower individuals and promote environmental stewardship. With a focus on innovation and collaboration, we aim to address pressing challenges and inspire meaningful solutions.
         </p>
 
         <p className="mt-4 text-gray-700">
-          With a rich heritage and a focus on nurturing the next generation of healthcare leaders, JIPMER continues to
-          be a hub for academic excellence and innovative medical research. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin
-          pulvinar. Suspendisse hendrerit ultrices mauris. Fusce tristique lacus at urna sollicitudin pulvinar.
-          Suspendisse hendrerit ultrices mauris.
+          Our work is fueled by a team of passionate individuals and supported by state-of-the-art resources, ensuring the highest standards of excellence in all our endeavors. Together, we are making a difference, one community at a time.
+        </p>
+
+        <p className="mt-4 text-gray-700">
+          Join us in our mission to create a brighter, more sustainable world for generations to come.
         </p>
         {/* Add more paragraphs with the same styling */}
       </div>

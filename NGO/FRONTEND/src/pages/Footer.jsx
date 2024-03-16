@@ -77,19 +77,19 @@ const Footer = () => {
 							<MdOutlineKeyboardArrowRight className="text-2xl" />
 						</Link> */}
 						<Link to="http://localhost:1001/" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
-							<p>HEALTH-CARE SUPPORT</p>
+							<p>Health-care Support</p>
 							<MdOutlineKeyboardArrowRight className="text-2xl" />
 						</Link>
 						<Link to="http://localhost:1002/" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
-							<p>EDUCATION SUPPORT</p>
+							<p>Education Support</p>
 							<MdOutlineKeyboardArrowRight className="text-2xl" />
 						</Link>
 						<Link to="http://localhost:1003/" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
-							<p>DIETARY SUPPORT</p>
+							<p>Dietary Support</p>
 							<MdOutlineKeyboardArrowRight className="text-2xl" />
 						</Link>
 						<Link to="http://localhost:1004/" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
-							<p>SOCIAL CAUSE SUPPORT</p>
+							<p>Social Cause Support</p>
 							<MdOutlineKeyboardArrowRight className="text-2xl" />
 						</Link>
 					</div>

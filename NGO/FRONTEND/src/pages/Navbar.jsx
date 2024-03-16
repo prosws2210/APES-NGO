@@ -36,7 +36,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link to="/viewreport">Donations</Link>
+          <Link to="/donation">Donations</Link>
           <Link to="/contact">Contact Us</Link>
         </div>
 
