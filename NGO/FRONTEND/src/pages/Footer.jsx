@@ -61,7 +61,7 @@ const Footer = () => {
 						<Link to="/login">
 							<div className="flex flex-col bottom-32 left-4 w-60 gap-y-3">
 								<button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-full">
-									Join to be one Among Us
+									Become an Umeed Member
 								</button>
 							</div>
 						</Link>
