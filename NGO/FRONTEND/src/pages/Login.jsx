@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from "./Navbar";
 import Title from "../components/Login_Register/Login_Title"
-// import LoginR from '../components/Login_Register/LoginR';
 import LoginR_new from '../components/Login_Register/LoginR_new';
 import Footer from "./Footer";
 
@@ -10,7 +9,6 @@ const Login = () => {
     <div>
         <Navbar />
         <Title />
-        {/* <LoginR /> */}
         <LoginR_new />
         <Footer />
       
@@ -21,3 +19,4 @@ const Login = () => {
 export default Login
  
 
+  

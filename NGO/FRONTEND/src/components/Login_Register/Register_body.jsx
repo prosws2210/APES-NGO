@@ -48,53 +48,6 @@ const Register_body = () => {
         reader.readAsDataURL(file);
     };
 
-    const handleRegister = async () => {
-        console.log(password + " " + confirmPassword)
-        // Register the user
-        try {
-            const res = await axios.post(
-                "http://localhost:5000/api/auth/register",
-                {
-                    name,
-                    DOB,
-                    selectedGender,
-                    bloodGroup,
-                    phoneNumber,
-                    AlphoneNumber,
-                    aadharNumber,
-                    image,
-                    email,
-                    password,
-                    isStaff,
-                    staffID: isStaff ? staffID : "",
-                    education: isStaff ? education : "",
-                    experience: isStaff ? experience : "",
-                    language: isStaff ? language : "",
-                    timing: isStaff ? timing : "",
-                    deptGroup: isStaff ? deptGroup : "",
-                }
-            );
-
-            setName(res.data.name);
-            setDOB(res.data.DOB);
-            setSelectedGender(res.data.selectedGender);
-            setBloodGroup(res.data.bloodGroup);
-            setPhoneNumber(res.data.phoneNumber);
-            setAlphoneNumber(res.data.AlphoneNumber);
-            setAadharNumber(res.data.aadharNumber);
-            setImage(res.data.image);
-            setEmail(res.data.email);
-            setPassword(res.data.password);
-            setError(false);
-            navigate("/Login");
-        } 
-        
-        catch (err) {
-            setError(true);
-            console.log("Error at handlesubmit ", err);
-        }
-	};
-
     const checkAdminPassword = () => {
 		const adminPass = "apes";
 		
