@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
+import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import { UserContext } from "../context/UserContext";
+import toast from "react-hot-toast";
 
 
 const LoginR_new = () => {
@@ -19,14 +21,48 @@ const LoginR_new = () => {
 		setShowPassword(!showPassword);
 	};
 
+	const handleLogin = async () => {
+		try {
+			const res = await axios.post(
+				"https://health-care-website-two.vercel.app/api/auth/login",
+				{ email, password }, // Changed from 'username' to 'email'
+				{ withCredentials: true }
+			);
+			localStorage.setItem("token", res.data.token); // Store the token in local storage
+			console.log("Token at login: ", res.data.token);
+			setUser(res.data);
+			setError(false);
+			navigate("/");
+			toast.success("Welcome back " + res.data.username + " !");
+		} catch (err) {
+			setError(true);
+			console.log(err);
+		}
+	};
+
 	const checkAdminPassword = () => {
 		const adminPass = "apes";
 		if (adminPassword === adminPass) {
 			setIsAdmin(true);
-		} 
+		} else {
+			toast.error("Incorrect admin password");
+		}
 	};
 
-	
+	const handleCameraLogin = async () => {
+        // Assuming you have image data to send to the backend
+        const imageData = ''; // Fill this with actual image data
+
+        try {
+            const response = await axios.post('/camera-login', { image_data: imageData });
+            setLoginResult(response.data.result);
+        } 
+		
+		catch (error) {
+            console.error('Error:', error);
+        }
+    };
+
 	return (
 		<>
 			{!isAdmin ? (
