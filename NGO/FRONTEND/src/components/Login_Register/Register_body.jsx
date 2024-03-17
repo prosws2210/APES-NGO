@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import toast from "react-hot-toast";
+
 
 const Register_body = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -51,55 +51,48 @@ const Register_body = () => {
 
     const handleRegister = async () => {
         console.log(password + " " + confirmPassword)
-        if (password !== confirmPassword) {
-            toast.error("Passwords do not match");
+        // Register the user
+        try {
+            const res = await axios.post(
+                "http://localhost:5000/api/auth/register",
+                {
+                    name,
+                    DOB,
+                    selectedGender,
+                    bloodGroup,
+                    phoneNumber,
+                    AlphoneNumber,
+                    aadharNumber,
+                    image,
+                    email,
+                    password,
+                    isStaff,
+                    staffID: isStaff ? staffID : "",
+                    education: isStaff ? education : "",
+                    experience: isStaff ? experience : "",
+                    language: isStaff ? language : "",
+                    timing: isStaff ? timing : "",
+                    deptGroup: isStaff ? deptGroup : "",
+                }
+            );
+
+            setName(res.data.name);
+            setDOB(res.data.DOB);
+            setSelectedGender(res.data.selectedGender);
+            setBloodGroup(res.data.bloodGroup);
+            setPhoneNumber(res.data.phoneNumber);
+            setAlphoneNumber(res.data.AlphoneNumber);
+            setAadharNumber(res.data.aadharNumber);
+            setImage(res.data.image);
+            setEmail(res.data.email);
+            setPassword(res.data.password);
+            setError(false);
+            navigate("/Login");
         } 
         
-        else {
-            // Register the user
-            try {
-                const res = await axios.post(
-                    "http://localhost:5000/api/auth/register",
-                    {
-                        name,
-                        DOB,
-                        selectedGender,
-                        bloodGroup,
-                        phoneNumber,
-                        AlphoneNumber,
-                        aadharNumber,
-                        image,
-                        email,
-                        password,
-                        isStaff,
-                        staffID: isStaff ? staffID : "",
-                        education: isStaff ? education : "",
-                        experience: isStaff ? experience : "",
-                        language: isStaff ? language : "",
-                        timing: isStaff ? timing : "",
-                        deptGroup: isStaff ? deptGroup : "",
-                    }
-                );
-
-                setName(res.data.name);
-                setDOB(res.data.DOB);
-                setSelectedGender(res.data.selectedGender);
-                setBloodGroup(res.data.bloodGroup);
-                setPhoneNumber(res.data.phoneNumber);
-                setAlphoneNumber(res.data.AlphoneNumber);
-                setAadharNumber(res.data.aadharNumber);
-                setImage(res.data.image);
-                setEmail(res.data.email);
-                setPassword(res.data.password);
-                setError(false);
-                toast.success("Account created successfully");
-                navigate("/Login");
-            } 
-            
-            catch (err) {
-                setError(true);
-                console.log("Error at handlesubmit ", err);
-            }
+        catch (err) {
+            setError(true);
+            console.log("Error at handlesubmit ", err);
         }
 	};
 
@@ -109,10 +102,6 @@ const Register_body = () => {
         if (adminPassword === adminPass) {
 			setIsAdmin(true);
 		} 
-        
-        else {
-			toast.error("Incorrect admin password");
-		}
 	};
 
     const toggleShowPassword = () => setShowPassword(!showPassword);
