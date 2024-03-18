@@ -40,7 +40,7 @@ const Navbar = () => {
         <Link to="/viewreport">Reports & Prescriptions</Link>
 
         <div className="flex items-center">
-          <Link to="/login">
+          <Link to="/donation">
             <button className="rounded-full px-4 py-2 bg-yellow-400 text-sm font-medium text-black-700 transform hover:scale-110 transition-transform duration-200">              
               DONATE ❤
             </button>
