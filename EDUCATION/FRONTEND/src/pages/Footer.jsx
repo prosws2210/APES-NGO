@@ -13,67 +13,26 @@ const Footer = () => {
 	return (
 		<div className="">
 			<div className="flex gap-24 bg-neutral-700 text-white px-20 pt-8 pb-8">
-				<div className="w-3/12">
-					<h2 className="font-bold text-xl">Call us now @</h2>
-					<div className="mt-3">
-						<div className="flex pb-2">
-							<a href="https://www.facebook.com/">
-								<FaPhone className="text-1xl mr-4 mt-2" />
-							</a>
-							<div>
-								<h6 className="font-semibold text-xs">Emergency</h6>
-								<p>
-									<a href="tel:1066" className="text-blue-500">
-										1066
-									</a>
-								</p>
-							</div>
-						</div>
-
-						<div className="flex pb-2">
-							<a href="https://www.facebook.com/">
-								<FaPhone className="text-1xl mr-4 mt-2" />
-							</a>
-							<div>
-								<h6 className="font-semibold text-xs">Lifeline International</h6>
-								<p>
-									<a href="tel:4043441066" className="text-blue-500">
-										+91 4043441066
-									</a>
-								</p>
-							</div>
-						</div>
-
-						<div className="flex pb-2">
-							<a href="https://www.facebook.com/">
-								<FaPhone className="text-1xl mr-4 mt-2" />
-							</a>
-							<div>
-								<h6 className="font-semibold text-xs">Health Help Line</h6>
-								<p>
-									<a href="tel:1860-500-1066" className="text-blue-500">
-										1860-500-1066
-									</a>
-								</p>
-							</div>
-						</div>
-
-						<div className="flex flex-col bottom-32 left-4 w-60 gap-y-3">
-							<button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-full">
-								Book an Appointment
+				<div className="w-3/12 bg-blue-500 p-4 rounded-2xl">
+					<h2 className="font-bold text-2xl text-center">Join Our Mission</h2>
+					<div className="flex flex-col gap-6 mt-8">
+						<div className="flex flex-col items-center justify-center w-60">
+							<button className="bg-white hover:bg-blue-700 text-blue-500 hover:text-white font-bold py-2 px-4 rounded-full">
+								BECOME A VOLUNTEER ❤
 							</button>
 						</div>
 
+						<div className="flex flex-col items-center justify-center w-60">
+							<button className="bg-white hover:bg-blue-700 text-blue-500 hover:text-white font-bold py-2 px-4 rounded-full">
+								DONATE NOW ❤
+							</button>
+						</div>
 					</div>
 				</div>
 
 				<div className="w-5/12">
 					<h2 className="font-bold text-xl">Useful Links</h2>
 					<div className="flex flex-col gap-2 mt-3">
-						{/* <Link to="/" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
-							<p>Home</p>
-							<MdOutlineKeyboardArrowRight className="text-2xl" />
-						</Link> */}
 						<Link to="/predict" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
 							<p>Diseases & Conditions - Predict Disease</p>
 							<MdOutlineKeyboardArrowRight className="text-2xl" />

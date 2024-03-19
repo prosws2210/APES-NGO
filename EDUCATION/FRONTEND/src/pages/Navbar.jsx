@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { IoIosArrowDown } from "react-icons/io";
+import { FaHeart } from 'react-icons/fa';
+
 
 const Navbar = () => {
   const boxShadowStyle = {
@@ -19,7 +22,7 @@ const Navbar = () => {
 
         <Link to="/">Home</Link>
         <Link to="/about">About Us</Link>
-        <Link to="/viewreport">Education</Link>
+        <Link to="/stories">Our Stories</Link>
 
         <div className="flex items-center">
           <Link to="/login">

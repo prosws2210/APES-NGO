@@ -1,74 +1,109 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Box = ({ imgSrc, altText, title, description }) => {
+const Box = ({ imgSrc, altText, name, description }) => {
   return (
-    <div className="bg-white p-4 shadow-lg rounded-md">
+    <div className="bg-white p-4 rounded-lg shadow-2xl transition duration-500 ease-in-out transform hover:shadow-lg hover:-translate-y-1 hover:scale-110">
       <div className="text-center">
-        <div className="bg-blue-300 rounded-full p-4 w-fit mx-auto">
-          <img className="w-12 h-12 mx-auto" src={imgSrc} alt={altText} />
+        <div className='flex flex-col pb-4 items-center justify-center'>
+            <div className="bg-blue-300 rounded-full p-4 w-fit mx-auto">
+                <img className="w-12 h-12 mx-auto" src={imgSrc} alt={altText} />
+            </div>
+            <h5 className="font-bold text-lg pt-4 text-center">{name}</h5>
         </div>
-        <h5 className="font-bold text-lg pt-4 pb-4">{title}</h5>
-        <p className="text-[13px]">{description}</p>
+        <p className="text-sm text-[13px]">{description}</p>
       </div>
     </div>
   );
 };
 
-const Home_KeyFeatures = () => {
+const HomeKeyFeatures = () => {
+  const [showMore, setShowMore] = useState(false);
+
   const keyFeaturesData = [
+    // Your data here
     {
       imgSrc: "assets\\images\\Key features\\heart-rate-monitor.png",
-      altText: "Heart Rate Monitor",
-      title: "Newest Technologies",
-      description: "Embracing the newest technologies, we at Healthify Yourself are committed to innovation. Our goal is to stay at the forefront of medical breakthroughs. This commitment ensures that we provide the most effective treatments and care. We believe in the power of technology to transform healthcare. By leveraging these, we aim to improve patient outcomes.",
+      altText: "Blood Donation",
+      name: "Blood Donation",
+      description: "Every drop counts: donate blood, save lives, and be the reason someone smiles today.",
     },
     {
       imgSrc: "assets\\images\\Key features\\doctor (3).png",
-      altText: "Experienced Doctors",
-      title: "Experienced Doctors",
-      description: "Our team of experienced doctors at Healthify Yourself brings a wealth of knowledge across various specialties. Their expertise, combined with a deep commitment to patient care, ensures you receive the highest standard of medical treatment. Our doctors are dedicated to helping you understand your health better, empowering you to make informed decisions about your healthcare.",
+      altText: "Book Donation",
+      name: "Book Donation",
+      description: "Book donation is a wonderful way to share knowledge, promote literacy, and make a positive impact.",
     },
     {
       imgSrc: "assets\\images\\Key features\\head-side-view.png",
-      altText: "High Customer Satisfaction",
-      title: "High Customer Satisfaction",
-      description: "At Healthify Yourself, we take pride in the high level of satisfaction among our patients. Our commitment to patient care and focus on personalized treatment plans have resulted in positive health outcomes. We believe that patient satisfaction is a testament to our success. Your health and satisfaction are our ultimate rewards. We strive to exceed your expectations.",
+      altText: "Cloth Donation",
+      name: "Cloth Donation",
+      description: "Spread warmth and hope: donate clothes to those in need and make a positive impact in someone's life",
     },
     {
       imgSrc: "assets\\images\\Key features\\hospital.png",
-      altText: "Pharma Pipeline",
-      title: "Pharma Pipeline",
-      description: "Our Pharma Pipeline at Healthify Yourself is robust and diverse. We focus on developing innovative treatments for a range of diseases. Our commitment to advancing healthcare through research and development is unwavering. We are dedicated to bringing new medicines to patients who need them. Our pipeline reflects our drive to transform patient lives by harnessing the power of science.",
+      altText: "Food Donation",
+      name: "Food Donation",
+      description: "Join our community of volunteers and be a part of the change you want to see in the world.",
     },
     {
-      imgSrc: "assets\\images\\Key features\\heartbeat.png",
-      altText: "Pharma Team",
-      title: "Pharma Team",
-      description: "Our Pharma Team at Healthify Yourself comprises dedicated professionals with diverse backgrounds in pharmaceutical sciences. Their expertise drives our commitment to developing innovative treatments. We believe in the power of a multidisciplinary team to deliver quality healthcare solutions. Our team works tirelessly to bring safe and effective treatments to our patients.",
+      imgSrc: "assets\\images\\Key features\\donate.png",
+      altText: "Money Donation",
+      name: "Money Donation",
+      description: "Your donation can help to change lives. You can make a difference by supporting us and for being an UMEED!!",
     },
     {
-      imgSrc: "assets\\images\\Key features\\capsule.png",
-      altText: "High Quality Treatments",
-      title: "High Quality Treatments",
-      description: "At Healthify Yourself, we are dedicated to providing high-quality treatments. Our treatments are both effective and safe, based on the latest medical research. We tailor our treatments to meet the unique needs of each patient. Our goal is to improve health outcomes and enhance the quality of life for our patients. We believe in the power of personalized care to transform health into better.",
+      imgSrc: "assets\\images\\Key features\\volunteer.png",
+      altText: "Volunteer",
+      name: "Volunteer",
+      description: "Join our community of volunteers and be a part of the change you want to see in the world.",
     },
-    // Add similar objects for other boxes
+    {
+      imgSrc: "assets\\images\\Key features\\donate-1.png",
+      altText: "Donate",
+      name: "Donate",
+      description: "Your donation can help to change lives. You can make a difference by supporting us and for being an UMEED!!",
+    },
+    {
+      imgSrc: "assets\\images\\Key features\\education.png",
+      altText: "Education",
+      name: "Education",
+      description: "Support our education initiatives to empower young minds. Your contribution can shape the future of many.",
+    },
+    {
+      imgSrc: "assets\\images\\Key features\\healthcare.png",
+      altText: "Healthcare",
+      name: "Healthcare",
+      description: "Contribute to our healthcare projects to provide medical aid to those who need it the most.",
+    },
   ];
 
-  return (
-    <div className='bg-violet-50 py-10 px-10'>
-      <div className='text-center p-4'>
-        <h2 className='text-2xl font-bold pb-2'>Why choose Dr. Symptoms ???</h2>
-        <p className='text-gray-600'>Take a look at assistance we offer </p>
-      </div>
+  const itemsToShow = showMore ? keyFeaturesData : keyFeaturesData.slice(0, 4);
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pb-6 px-4 md:px-20 justify-evenly">
-        {keyFeaturesData.map((feature, index) => (
+  return (
+    <div className="bg-[#ede7ce] px-20 py-8 text-center">
+      <h2 className="text-2xl font-bold text-[#721c24] mb-4">OUR FEATURES</h2>
+      <p className="text-lg text-[#721c24] mb-8">
+        You can make a difference by supporting us and for being an
+        <strong> UMEED!!</strong>
+        <br />
+        Your donation can help to change lives.
+      </p>
+      <div className="grid pb-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {itemsToShow.map((feature, index) => (
           <Box key={index} {...feature} />
         ))}
       </div>
+      {showMore ? (
+        <button onClick={() => setShowMore(false)} className="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
+          See Less
+        </button>
+      ) : (
+        <button onClick={() => setShowMore(true)} className="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
+          See More
+        </button>
+      )}
     </div>
   );
 };
 
-export default Home_KeyFeatures;
+export default HomeKeyFeatures;

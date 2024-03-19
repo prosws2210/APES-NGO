@@ -22,22 +22,7 @@ const Navbar = () => {
 
         <Link to="/">Home</Link>
         <Link to="/about">About Us</Link>
-
-        <div className="group relative">
-          <div className="flex gap-1 cursor-pointer" onMouseEnter={() => setIsOpen(true)}>
-            <div className="flex items-center">Diseases & Conditions</div>
-            <div className="flex items-center"><IoIosArrowDown className="text-1xl" /></div>
-          </div>
-
-          {isOpen && (
-            <div className="absolute z-10 mt-2 space-y-2 p-2 bg-white rounded-xl backdrop-blur-md shadow-lg w-40 border-2 border-black">
-              <Link to="/predict" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900">Predict Disease</Link>
-              <Link to="/check" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900">Check Disease</Link>
-            </div>
-          )}
-        </div>
-
-        <Link to="/viewreport">Reports & Prescriptions</Link>
+        <Link to="/stories">Our Stories</Link>
 
         <div className="flex items-center">
           <Link to="/login">
