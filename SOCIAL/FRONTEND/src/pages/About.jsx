@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from "./Navbar";
 import Title from "../components/About Us/About_Title"
+import Map from "../components/About Us/About_Map.jsx"
 import Content_start from "../components/About Us/About_ContentStart.jsx"
 import Content from "../components/About Us/About_Content"
 import Features from "../components/About Us/About_Features.jsx"
@@ -11,9 +12,10 @@ const About_Us = () => {
     <div>
         <Navbar />
         <Title />
+        <Map />
         <Content_start />
         <Content />
-        <Features />
+        <Features /> 
         <Footer />
     </div>
   )
