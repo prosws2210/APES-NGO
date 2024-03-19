@@ -22,7 +22,7 @@ const Navbar = () => {
 
         <Link to="/">Home</Link>
         <Link to="/about">About Us</Link>
-        <Link to="/">Our Stories</Link>
+        <Link to="/stories">Our Stories</Link>
 
         <div className="flex items-center">
           <Link to="/login">
