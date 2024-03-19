@@ -1,17 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import { FaCheckCircle, FaPlus, FaEquals, FaCreditCard, FaMoneyBill, FaFileAlt, FaFileUpload, FaTrello, FaWallet } from 'react-icons/fa';
+import Select from 'react-tailwindcss-select';
 
+const donationOptions = [
+  4500.00,
+  9000.00,
+  13500.00,
+  18000.00,
+  24000.00,
+  30000.00,
+  37500.00,
+  45000.00,
+  60000.00,
+  75000.00,
+  90000.00,
+  105000.00,
+];
 
 const DonationForm = () => {
   const [step, setStep] = React.useState(1);
   const [num1, setNum1] = useState(Math.floor(Math.random() * 10));
   const [num2, setNum2] = useState(Math.floor(Math.random() * 10));
+  const [selectedAmount, setSelectedAmount] = useState(null);
+  const amount = Number(selectedAmount);
+  const childrenFed = !isNaN(amount) ? Math.floor(amount / 1500) : 0;
+
+  const handleAmountChange = (value) => {
+    setSelectedAmount(value);
+  };
 
   useEffect(() => {
     setNum1(Math.floor(Math.random() * 10));
     setNum2(Math.floor(Math.random() * 10));
   }, []);
-
 
   return (
     <div className="bg-violet-50 px-20 pt-8 pb-12 flex items-center justify-center">
@@ -36,21 +57,35 @@ const DonationForm = () => {
         </div>
 
         <div style={{ minHeight: '400px' }}> {/* Set a fixed height for the content area */}
+
           {/* STEP 1 */}
           {step === 1 && (
             <div>
               <div className="mb-4 grid grid-cols-4 gap-4">
-                {['₹4500.00', '₹9000.00', '₹13500.00', '₹18000.00', '₹24000.00', '₹30000.00', '₹37500.00', '₹45000.00', '₹60000.00', '₹75000.00', '₹90000.00', '₹105000.00'].map((amount, index) => (
-                  <button key={index} className="bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-200 ease-in-out shadow-lg py-2">
+                {donationOptions.map((amount, index) => (
+                  <button
+                    key={index}
+                    className="bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-200 ease-in-out shadow-lg py-2"
+                    onClick={() => handleAmountChange(amount)}
+                  >
                     {amount}
                   </button>
                 ))}
-                <div className="flex justify-between items-center mt-4">
-                  <input className="flex-grow mr-4 rounded-lg border border-gray-300 p-2" placeholder="Other Amount" />
-                  <div className="text-green-500 flex items-center">
-                    <FaCheckCircle className="w-6 h-6" /> ₹4500 feeds 3 children/year.
+              </div>
+              <div className="flex flex-row justify-start items-center mt-4">
+                <input
+                  className="w-1/3 mr-4 rounded-lg border border-gray-300 p-2"
+                  placeholder="Other Amount"
+                  onChange={(e) => handleAmountChange(e.target.value)}
+                />
+                {selectedAmount && 
+                  <div className="flex items-center text-lg">
+                    <FaCheckCircle className="text-green-500 mr-2 w-8 h-8" />
+                    <span style={{ WebkitTextStroke: '1px black' }}>
+                      {`₹${selectedAmount} feeds ${childrenFed} children / year.`}
+                    </span>
                   </div>
-                </div>
+                }
               </div>
 
               <div className="p-6">
@@ -83,7 +118,6 @@ const DonationForm = () => {
                     <input className="border border-gray-300 p-2 rounded" placeholder="PAN Number*" />
                     <input className="border border-gray-300 p-2 rounded" placeholder="Address*" />
                   </div>
-                  {/* <div className="text-sm mb-4">To get the 80-G certificate, please enter your PAN number</div> */}
                   <div className="grid grid-cols-3 gap-4 mb-4">
                     <input className="border border-gray-300 p-2 rounded" placeholder="Pin Code*" />
                     <input className="border border-gray-300 p-2 rounded" placeholder="State*" />
