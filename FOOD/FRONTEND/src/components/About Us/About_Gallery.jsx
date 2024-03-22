@@ -3,17 +3,17 @@ import 'tailwindcss/tailwind.css';
 
 const About_Gallery = () => {
   const images = [
-    "/assets/images/gallery/gallery_01.jpg",
-    "/assets/images/gallery/gallery_02.jpg",
-    "/assets/images/gallery/gallery_03.jpg",
-    "/assets/images/gallery/gallery_04.jpg",
-    "/assets/images/gallery/gallery_05.jpg",
-    "/assets/images/gallery/gallery_06.jpg",
-    "/assets/images/gallery/gallery_08.jpg",
-    "/assets/images/gallery/gallery_09.jpg",
-    "/assets/images/gallery/gallery_10.jpg",
-    "/assets/images/gallery/gallery_11.jpg",
-    "/assets/images/gallery/gallery_12.jpg",   
+    "/assets/images/food/food1.jpeg",
+    "/assets/images/food/food2.jpeg",
+    "/assets/images/food/food3.jpeg",
+    "/assets/images/food/food4.jpg",
+    "/assets/images/food/food5.jpeg",
+    "/assets/images/food/food6.png",
+    "/assets/images/food/food7.jpg",
+    "/assets/images/food/food9.jpg",
+    "/assets/images/food/food10.jpeg",
+    "/assets/images/food/food11.jpeg",
+    "/assets/images/food/food12.jpg",   
   ];
 
   return (

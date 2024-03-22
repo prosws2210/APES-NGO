@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About.jsx";
 import Stories from "./pages/Stories.jsx";
+import Donate from "./pages/Donate.jsx";
 
 
 export default function App() {
@@ -15,8 +16,10 @@ export default function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/About" element={<About />} />
 					<Route path="/Stories" element={<Stories />} />
+					<Route path="/Donate" element={<Donate />} />
 				</Routes>
 			</Router>
 		</div>
 	);
 }
+ 

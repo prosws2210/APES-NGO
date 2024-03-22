@@ -12,7 +12,7 @@ const About_Us = () => {
         <Navbar />
         <Title />
         <Content_start />
-        <Content />
+        {/* <Content /> */}
         <Features />
         <Footer />
     </div>

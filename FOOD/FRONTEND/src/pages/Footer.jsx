@@ -49,7 +49,7 @@ const Footer = () => {
 							<p>Our Stories</p>
 							<MdOutlineKeyboardArrowRight className="text-2xl" />
 						</Link>
-						<Link to="/Donation" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
+						<Link to="http://localhost:2000/donation" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
 							<p>Donate Us</p>
 							<MdOutlineKeyboardArrowRight className="text-2xl" />
 						</Link>
