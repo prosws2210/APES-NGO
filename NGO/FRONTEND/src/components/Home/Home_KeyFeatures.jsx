@@ -9,7 +9,7 @@ const Home_KeyFeatures = () => {
           <div className="max-w-[500px] mr-8">
             <div className="relative">
               <img
-                src="assets/images/blog/blog_04.jpg"
+                src="assets/images/pictures/image_3.jpg"
                 alt=""
                 className="w-full h-auto rounded-md shadow-xl border-8 border-neutral-100"
                 loading='lazy'
@@ -66,7 +66,7 @@ const Home_KeyFeatures = () => {
         <div className="max-w-[500px] ml-8">
           <div className="relative">
             <img
-              src="assets/images/blog/blog_04.jpg"
+              src="assets/images/pictures/image_4.jpg"
               alt=""
               className="w-full h-auto rounded-md shadow-xl border-8 border-neutral-100"
               loading='lazy'
@@ -81,7 +81,7 @@ const Home_KeyFeatures = () => {
         <div className="max-w-[500px] mr-8">
           <div className="relative">
             <img
-              src="assets/images/blog/blog_04.jpg"
+              src="assets/images/pictures/image_17.jpg"
               alt=""
               className="w-full h-auto rounded-md shadow-xl border-8 border-neutral-100"
               loading='lazy'
@@ -138,7 +138,7 @@ const Home_KeyFeatures = () => {
         <div className="max-w-[500px] ml-8">
           <div className="relative">
             <img
-              src="assets/images/blog/blog_04.jpg"
+              src="assets/images/pictures/image_1.jpg"
               alt=""
               className="w-full h-auto rounded-md shadow-xl border-8 border-neutral-100"
               loading='lazy'

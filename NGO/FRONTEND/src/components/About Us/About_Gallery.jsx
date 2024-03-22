@@ -3,18 +3,24 @@ import 'tailwindcss/tailwind.css';
 
 const About_Gallery = () => {
   const images = [
-    "/assets/images/gallery/gallery_01.jpg",
-    "/assets/images/gallery/gallery_02.jpg",
-    "/assets/images/gallery/gallery_03.jpg",
-    "/assets/images/gallery/gallery_04.jpg",
-    "/assets/images/gallery/gallery_05.jpg",
-    "/assets/images/gallery/gallery_06.jpg",
-    // "/assets/images/gallery/gallery_07.jpg",
-    "/assets/images/gallery/gallery_08.jpg",
-    "/assets/images/gallery/gallery_09.jpg",
-    "/assets/images/gallery/gallery_10.jpg",
-    "/assets/images/gallery/gallery_11.jpg",
-    "/assets/images/gallery/gallery_12.jpg",   
+    "/assets/images/pictures/image_1.jpg",
+    "/assets/images/pictures/image_2.jpg",
+    "/assets/images/pictures/image_3.jpg",
+    "/assets/images/pictures/image_4.jpg",
+    "/assets/images/pictures/image_5.jpg",
+    "/assets/images/pictures/image_6.jpg",
+    "/assets/images/pictures/image_7.jpg",
+    "/assets/images/pictures/image_8.jpg",
+    "/assets/images/pictures/image_9.jpg",
+    // "/assets/images/pictures/image_10.jpg",
+    "/assets/images/pictures/image_11.jpg",
+    // "/assets/images/pictures/image_12.jpg",  
+    "/assets/images/pictures/image_13.jpg",  
+    "/assets/images/pictures/image_14.jpg",  
+    // "/assets/images/pictures/image_15.jpg",  
+    // "/assets/images/pictures/image_16.jpg",  
+    "/assets/images/pictures/image_17.jpg",  
+    "/assets/images/pictures/image_18.jpg",  
   ];
 
   return (
@@ -22,14 +28,14 @@ const About_Gallery = () => {
       <div className='text-center pt-8'>
         <h2 className="text-2xl font-bold">OUR PHOTO GALLERY</h2>
       </div>
-      <div className="max-w-6xl py-6 mx-auto grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-auto grid-flow-dense">
+      <div className="max-w-7xl py-6 mx-auto grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-auto grid-flow-dense">
         {images.map((image, index) => (
           <div key={index} className={index % 2 === 0 ? "row-span-2" : index % 3 === 0 ? "col-span-2" : ""}>
             <img 
               src={image} 
               alt="" 
               className="w-full h-full object-cover border-8 border-white shadow-xl" 
-              loading="lazy" // Add the loading attribute
+              loading="lazy" 
             />
           </div>
         ))}

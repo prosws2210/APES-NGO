@@ -21,7 +21,7 @@ def rename_images(directory):
             print(f"Renamed {filename} to {new_name}")
 
 # Directory containing the images
-directory_path = r"C:\Users\HP\Documents\GitHub\APES NGO\Images Check\poverty images"
+directory_path = r"C:\Users\HP\Documents\GitHub\APES NGO\Images Check\pictures"
 
 # Call the function to rename images in the directory
 rename_images(directory_path)
