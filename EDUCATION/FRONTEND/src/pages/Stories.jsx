@@ -13,7 +13,6 @@ const Stories = () => {
         <Navbar />
         <Title />
         <Features />
-
         <Footer />
     </div>
   )

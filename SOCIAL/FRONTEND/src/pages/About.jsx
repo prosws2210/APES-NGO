@@ -14,7 +14,7 @@ const About_Us = () => {
         <Title />
         <Content_start />
         {/* <Map />
-        <Content /> */}
+        <Content /> */} 
         <Features /> 
         <Footer />
     </div>

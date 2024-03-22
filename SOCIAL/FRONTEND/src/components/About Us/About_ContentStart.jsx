@@ -22,7 +22,7 @@ const AboutContentStart = () => {
             src="/assets/images/poverty images/image_14.jpg"
             width="900"
           />
-        </div>
+        </div>  
 
         {/* Text div */}
         <div className='flex flex-col ml-4 space-y-4 pt-6'>

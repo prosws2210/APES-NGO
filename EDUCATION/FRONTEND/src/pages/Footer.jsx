@@ -16,37 +16,41 @@ const Footer = () => {
 				<div className="w-3/12 bg-blue-500 p-4 rounded-2xl">
 					<h2 className="font-bold text-2xl text-center">Join Our Mission</h2>
 					<div className="flex flex-col gap-6 mt-8">
-						<div className="flex flex-col items-center justify-center w-60">
-							<button className="bg-white hover:bg-blue-700 text-blue-500 hover:text-white font-bold py-2 px-4 rounded-full">
-								BECOME A VOLUNTEER ❤
-							</button>
-						</div>
+						<Link to="http://localhost:2000/login">
+							<div className="flex flex-col items-center justify-center w-60">
+								<button className="bg-white hover:bg-blue-700 text-blue-500 hover:text-white font-bold py-2 px-4 rounded-full">
+									BECOME A VOLUNTEER ❤
+								</button>
+							</div>
+						</Link>
 
-						<div className="flex flex-col items-center justify-center w-60">
-							<button className="bg-white hover:bg-blue-700 text-blue-500 hover:text-white font-bold py-2 px-4 rounded-full">
-								DONATE NOW ❤
-							</button>
-						</div>
+						<Link to="http://localhost:2000/donation">
+							<div className="flex flex-col items-center justify-center w-60">
+								<button className="bg-white hover:bg-blue-700 text-blue-500 hover:text-white font-bold py-2 px-4 rounded-full">
+									DONATE NOW ❤
+								</button>
+							</div>
+						</Link>
 					</div>
 				</div>
 
-				<div className="w-5/12">
+				<div className="w-4/12">
 					<h2 className="font-bold text-xl">Useful Links</h2>
 					<div className="flex flex-col gap-2 mt-3">
-						<Link to="/predict" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
-							<p>Diseases & Conditions - Predict Disease</p>
+						<Link to="/" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
+							<p>Home Webpage</p>
 							<MdOutlineKeyboardArrowRight className="text-2xl" />
 						</Link>
-						<Link to="/check" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
-							<p>Diseases & Conditions - Check Disease</p>
+						<Link to="/About" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
+							<p>About Us</p>
 							<MdOutlineKeyboardArrowRight className="text-2xl" />
 						</Link>
-						<Link to="/viewreport" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
-							<p>View Reports and Prescription</p>
+						<Link to="/Stories" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
+							<p>Our Stories</p>
 							<MdOutlineKeyboardArrowRight className="text-2xl" />
 						</Link>
-						<Link to="/contact" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
-							<p>Contact Us</p>
+						<Link to="http://localhost:2000/donation" className="border-b-2 border-neutral-500 pt-3 flex justify-between">
+							<p>Donate Us</p>
 							<MdOutlineKeyboardArrowRight className="text-2xl" />
 						</Link>
 					</div>
@@ -57,37 +61,37 @@ const Footer = () => {
 					<div className="text-sm italic mt-3">
 						<div className="flex flex-row justify-between">
 							<div className="flex flex-col">
-								<div className="flex justify-between gap-2">
-									<div>Isha Shrivastava</div>
-									<div>(22BRS1181)</div>
+								<div className="flex justify-between gap-4">
+									<div>Anushka Mohan</div>
+									<div>(22BCE5081)</div>
 								</div>
-								<div className="flex justify-between gap-2">
+								<div className="flex justify-between gap-4">
 									<div>Eliksha Maheshwari</div>
 									<div>(22BAI1312)</div>
 								</div>
 							</div>
 							<div className="flex flex-col">
-								<div className="flex justify-between gap-2">
+								<div className="flex justify-between gap-4">
+									<div>Paridhi Rathore</div>
+									<div>(22BCE1581)</div>
+								</div>
+								<div className="flex justify-between gap-4">
 									<div>Shakti Swaroop Sahu</div>
 									<div>(22BAI1012)</div>
-								</div>
-								<div className="flex justify-between gap-2">
-									<div>Soham Jyoti Mondal</div>
-									<div>(22BAI1023)</div>
 								</div>
 							</div>
 						</div>
 						
 						<br />
 
-						B.Tech in CSE - Spl. in AI with ( ML & Robotics ) <br />
+						B.Tech in CSE - Spl. in AI with &nbsp;&nbsp; ( Core & Machine Learning ) <br />
 						Vellore Institute of Technology - Chennai, Tamil Nadu, INDIA <br />
 
 						<br />
 
 						<strong>Phone : </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +91 1010101010 <br />
 						<strong>Email : </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; random_mail@gmail.com <br />
-						<a href="https://health-care-website-two.vercel.app/"> <strong>Website : </strong>&nbsp;&nbsp; www.health-care.com</a>
+						<a href="https://health-care-website-two.vercel.app/"> <strong>Website : </strong>&nbsp;&nbsp; www.social-care.com</a>
 					</div>
 				</div>
 			</div>
@@ -95,7 +99,7 @@ const Footer = () => {
 			<div className="bg-neutral-800 text-white py-4 flex justify-between px-20">
 				<div className="text-sm">
 					<a href="https://github.com/sws2210">
-						2024 &copy; All Rights Reserved | Designed by Eliksha Maheshwari and Developed by Shakti Swaroop Sahu
+						2024 &copy; All Rights Reserved | Designed and Developed by Team APES 
 					</a>
 				</div>
 				<div className="flex gap-4">

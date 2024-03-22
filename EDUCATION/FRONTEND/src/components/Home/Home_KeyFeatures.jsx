@@ -22,59 +22,29 @@ const HomeKeyFeatures = () => {
   const keyFeaturesData = [
     // Your data here
     {
-      imgSrc: "assets\\images\\Key features\\heart-rate-monitor.png",
-      altText: "Blood Donation",
-      name: "Blood Donation",
-      description: "Every drop counts: donate blood, save lives, and be the reason someone smiles today.",
+      imgSrc: "assets\\images\\Education Icons\\classroom.png",
+      altText: "School Partnerships",
+      name: "School Partnerships",
+      description: "Volunteers of Umeed foundation visits various schools and conduct engaging sessions for the young minds.",
     },
     {
-      imgSrc: "assets\\images\\Key features\\doctor (3).png",
+      imgSrc: "assets\\images\\Education Icons\\books.png",
       altText: "Book Donation",
       name: "Book Donation",
       description: "Book donation is a wonderful way to share knowledge, promote literacy, and make a positive impact.",
     },
     {
-      imgSrc: "assets\\images\\Key features\\head-side-view.png",
-      altText: "Cloth Donation",
-      name: "Cloth Donation",
-      description: "Spread warmth and hope: donate clothes to those in need and make a positive impact in someone's life",
+      imgSrc: "assets\\images\\Education Icons\\library.png",
+      altText: "Volunteer in libraries",
+      name: "Volunteer in libraries",
+      description: "Umeed foundation provides support to public libraries by active donation from the volunteers.",
     },
     {
-      imgSrc: "assets\\images\\Key features\\hospital.png",
-      altText: "Food Donation",
-      name: "Food Donation",
-      description: "Join our community of volunteers and be a part of the change you want to see in the world.",
-    },
-    {
-      imgSrc: "assets\\images\\Key features\\donate.png",
-      altText: "Money Donation",
-      name: "Money Donation",
-      description: "Your donation can help to change lives. You can make a difference by supporting us and for being an UMEED!!",
-    },
-    {
-      imgSrc: "assets\\images\\Key features\\volunteer.png",
-      altText: "Volunteer",
-      name: "Volunteer",
-      description: "Join our community of volunteers and be a part of the change you want to see in the world.",
-    },
-    {
-      imgSrc: "assets\\images\\Key features\\donate-1.png",
-      altText: "Donate",
-      name: "Donate",
-      description: "Your donation can help to change lives. You can make a difference by supporting us and for being an UMEED!!",
-    },
-    {
-      imgSrc: "assets\\images\\Key features\\education.png",
-      altText: "Education",
-      name: "Education",
-      description: "Support our education initiatives to empower young minds. Your contribution can shape the future of many.",
-    },
-    {
-      imgSrc: "assets\\images\\Key features\\healthcare.png",
-      altText: "Healthcare",
-      name: "Healthcare",
-      description: "Contribute to our healthcare projects to provide medical aid to those who need it the most.",
-    },
+      imgSrc: "assets\\images\\Education Icons\\support.png",
+      altText: "Individual Support",
+      name: "Individual Support",
+      description: "Committed ,responsible people who are passionate to make a difference are the backbone of Umeed foundation.",
+    },    
   ];
 
   const itemsToShow = showMore ? keyFeaturesData : keyFeaturesData.slice(0, 4);
@@ -93,7 +63,7 @@ const HomeKeyFeatures = () => {
           <Box key={index} {...feature} />
         ))}
       </div>
-      {showMore ? (
+      {/* {showMore ? (
         <button onClick={() => setShowMore(false)} className="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
           See Less
         </button>
@@ -101,7 +71,7 @@ const HomeKeyFeatures = () => {
         <button onClick={() => setShowMore(true)} className="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
           See More
         </button>
-      )}
+      )} */}
     </div>
   );
 };

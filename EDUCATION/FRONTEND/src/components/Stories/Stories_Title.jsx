@@ -6,7 +6,7 @@ const Stories_Title = () => {
   return (
     <div className="bg-violet-50 pt-6">
       <div className="text-center p-4">
-        <h2 className="text-2xl font-bold pb-2">STORIES ON SOCIAL CAUSE</h2>
+        <h2 className="text-2xl font-bold pb-2">STORIES ON EDUCATION</h2>
         <div className="flex items-center justify-center gap-4 text-gray-600">
           <div className='flex gap-1 items-center'>
             <FaHome className="text-sm" />
