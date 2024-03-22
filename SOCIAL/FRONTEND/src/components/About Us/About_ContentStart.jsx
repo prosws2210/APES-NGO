@@ -14,12 +14,12 @@ const AboutContentStart = () => {
       <div className="flex flex-row gap-10 items-center justify-center">
         {/* Image div */}
         <div className="relative mb-8">
-          <div className="absolute -inset-1 bg-[#95ff00] rounded-full blur opacity-50" />
+          <div className="absolute -inset-1 bg-blue-500 rounded-full blur opacity-50" />
           <img
             alt="Child smiling"
             className="relative rounded-full border-4 border-white"
             height="900"
-            src="/assets/images/poverty images/image_19.jpg"
+            src="/assets/images/poverty images/image_14.jpg"
             width="900"
           />
         </div>
@@ -51,15 +51,15 @@ const AboutContentStart = () => {
             </div>
           </div>
 
-          <div className="flex flex-row gap-20 items-center justify-center">
-            <Link to="/donate">
+          <div className="flex flex-row pl-24 gap-20 items-center justify-start">
+            <Link to="http://localhost:2000/donation">
               <button className="bg-[#bd1e59] text-white text-xl font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-[#9c1a4a] focus:outline-none focus:ring-2 focus:ring-[#bd1e59] focus:ring-opacity-50">
                 Make a Donation
               </button>
             </Link>
-            <button className="bg-[#bd1e59] text-white text-xl font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-[#9c1a4a] focus:outline-none focus:ring-2 focus:ring-[#bd1e59] focus:ring-opacity-50">
+            {/* <button className="bg-[#bd1e59] text-white text-xl font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-[#9c1a4a] focus:outline-none focus:ring-2 focus:ring-[#bd1e59] focus:ring-opacity-50">
               Be a Volunteer
-            </button>
+            </button> */}
           </div>
           <div className="mt-4 ml-24 text-gray-600">
             <p className="text-sm">

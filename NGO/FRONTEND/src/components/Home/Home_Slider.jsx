@@ -21,15 +21,19 @@ const HomeSlider = () => {
 
   const slides = [
     {
-        image: 'assets/images/slider/slider_11.jpg',
+        image: 'assets/images/slider/health_slider.jpg',
         title: 'Welcome to Umeed',
     },
     {
-        image: 'assets/images/slider/slider_22.jpg',
+        image: 'assets/images/slider/education_slider.jpg',
         title: 'Discover Our Impact',
     },
     {
-        image: 'assets/images/slider/slider_33.jpg',
+        image: 'assets/images/slider/food_slider.jpg',
+        title: 'Explore Our Social Initiatives',
+    },
+    {
+        image: 'assets/images/slider/social_slider.jpg',
         title: 'Explore Our Social Initiatives',
     },
   ];
@@ -99,7 +103,7 @@ const HomeSlider = () => {
           </div>
   
           <div className="w-2/5 flex justify-center items-center">
-            <div className="py-10 bg-blue-500 text-white text-center rounded-lg shadow-lg p-8 m-4">
+            <div className="py-10 bg-blue-400 text-white text-center rounded-lg shadow-lg p-8 m-4">
               <h2 className="text-4xl font-bold text-white mb-6">UNIFIED BY EMPATHY</h2>
               <p className="text-lg font-medium text-gray-700 mb-6">
                 In our shared journey, we are driven by empathy, seeking to uplift every soul and mend societal divides.

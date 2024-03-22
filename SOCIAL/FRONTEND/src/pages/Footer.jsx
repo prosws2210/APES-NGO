@@ -16,13 +16,15 @@ const Footer = () => {
 				<div className="w-3/12 bg-blue-500 p-4 rounded-2xl">
 					<h2 className="font-bold text-2xl text-center">Join Our Mission</h2>
 					<div className="flex flex-col gap-6 mt-8">
-						<div className="flex flex-col items-center justify-center w-60">
-							<button className="bg-white hover:bg-blue-700 text-blue-500 hover:text-white font-bold py-2 px-4 rounded-full">
-								BECOME A VOLUNTEER ❤
-							</button>
-						</div>
+						<Link to="http://localhost:2000/login">
+							<div className="flex flex-col items-center justify-center w-60">
+								<button className="bg-white hover:bg-blue-700 text-blue-500 hover:text-white font-bold py-2 px-4 rounded-full">
+									BECOME A VOLUNTEER ❤
+								</button>
+							</div>
+						</Link>
 
-						<Link to="/Donate">
+						<Link to="http://localhost:2000/donation">
 							<div className="flex flex-col items-center justify-center w-60">
 								<button className="bg-white hover:bg-blue-700 text-blue-500 hover:text-white font-bold py-2 px-4 rounded-full">
 									DONATE NOW ❤
