@@ -22,6 +22,7 @@ const DonationForm = () => {
   const [num1, setNum1] = useState(Math.floor(Math.random() * 10));
   const [num2, setNum2] = useState(Math.floor(Math.random() * 10));
   const [selectedAmount, setSelectedAmount] = useState(null);
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('credit-card');
   const amount = Number(selectedAmount);
   const childrenFed = !isNaN(amount) ? Math.floor(amount / 1500) : 0;
 
@@ -196,179 +197,228 @@ const DonationForm = () => {
               </div>
               <div className="flex gap-20">
                 <div className="flex flex-col w-1/4">
-                  <input type="radio" id="credit-card" name="payment-method" className="hidden" />
-                  <label htmlFor="credit-card" className="mb-4 flex items-center justify-between bg-[#e6f7ff] text-[#1890ff] p-4 rounded-md cursor-pointer">
-                    <FaCreditCard className="text-[#1890ff]" />
+                  
+                  <input type="radio" id="credit-card" name="payment-method" className="hidden" onClick={() => setSelectedPaymentMethod('credit-card')} />
+                  <label htmlFor="credit-card" className={`mb-4 flex items-center justify-between p-4 rounded-md cursor-pointer ${selectedPaymentMethod === 'credit-card' ? 'bg-[#e6f7ff] text-[#1890ff]' : ''}`}>
+                    <FaCreditCard className={`text-[${selectedPaymentMethod === 'credit-card' ? '#1890ff' : 'black'}]`} />
                     <span>CREDIT CARD</span>
                   </label>
-                  <input type="radio" id="debit-card" name="payment-method" className="hidden" />
-                  <label htmlFor="debit-card" className="mb-4 flex items-center justify-between p-4 rounded-md cursor-pointer">
-                    <FaMoneyBill />
+                  
+                  <input type="radio" id="debit-card" name="payment-method" className="hidden" onClick={() => setSelectedPaymentMethod('debit-card')} />
+                  <label htmlFor="debit-card" className={`mb-4 flex items-center justify-between p-4 rounded-md cursor-pointer ${selectedPaymentMethod === 'debit-card' ? 'bg-[#e6f7ff] text-[#1890ff]' : ''}`}>
+                    <FaMoneyBill className={`text-[${selectedPaymentMethod === 'debit-card' ? '#1890ff' : 'black'}]`} />
                     <span>DEBIT CARD</span>
                   </label>
-                  <input type="radio" id="net-banking" name="payment-method" className="hidden" />
-                  <label htmlFor="net-banking" className="mb-4 flex items-center justify-between p-4 rounded-md cursor-pointer">
-                    <FaFileAlt />
+                  
+                  <input type="radio" id="net-banking" name="payment-method" className="hidden" onClick={() => setSelectedPaymentMethod('net-banking')} />
+                  <label htmlFor="net-banking" className={`mb-4 flex items-center justify-between p-4 rounded-md cursor-pointer ${selectedPaymentMethod === 'net-banking' ? 'bg-[#e6f7ff] text-[#1890ff]' : ''}`}>
+                    <FaFileAlt className={`text-[${selectedPaymentMethod === 'net-banking' ? '#1890ff' : 'black'}]`} />
                     <span>NET BANKING</span>
                   </label>
-                  <input type="radio" id="upi" name="payment-method" className="hidden" />
-                  <label htmlFor="upi" className="mb-4 flex items-center justify-between p-4 rounded-md cursor-pointer">
-                    <FaFileUpload />
+                  
+                  <input type="radio" id="upi" name="payment-method" className="hidden" onClick={() => setSelectedPaymentMethod('upi')} />
+                  <label htmlFor="upi" className={`mb-4 flex items-center justify-between p-4 rounded-md cursor-pointer ${selectedPaymentMethod === 'upi' ? 'bg-[#e6f7ff] text-[#1890ff]' : ''}`}>
+                    <FaFileUpload className={`text-[${selectedPaymentMethod === 'upi' ? '#1890ff' : 'black'}]`} />
                     <span>UPI</span>
                   </label>
-                  <input type="radio" id="tez" name="payment-method" className="hidden" />
-                  <label htmlFor="tez" className="mb-4 flex items-center justify-between p-4 rounded-md cursor-pointer">
-                    <FaTrello />
+                  
+                  <input type="radio" id="tez" name="payment-method" className="hidden" onClick={() => setSelectedPaymentMethod('tez')} />
+                  <label htmlFor="tez" className={`mb-4 flex items-center justify-between p-4 rounded-md cursor-pointer ${selectedPaymentMethod === 'tez' ? 'bg-[#e6f7ff] text-[#1890ff]' : ''}`}>
+                    <FaTrello className={`text-[${selectedPaymentMethod === 'tez' ? '#1890ff' : 'black'}]`} />
                     <span>TEZ</span>
                   </label>
-                  <input type="radio" id="wallet" name="payment-method" className="hidden" />
-                  <label htmlFor="wallet" className="flex items-center justify-between p-4 rounded-md cursor-pointer">
-                    <FaWallet />
+                  
+                  <input type="radio" id="wallet" name="payment-method" className="hidden" onClick={() => setSelectedPaymentMethod('wallet')} />
+                  <label htmlFor="wallet" className={`flex items-center justify-between p-4 rounded-md cursor-pointer ${selectedPaymentMethod === 'wallet' ? 'bg-[#e6f7ff] text-[#1890ff]' : ''}`}>
+                    <FaWallet className={`text-[${selectedPaymentMethod === 'wallet' ? '#1890ff' : 'black'}]`} />
                     <span>WALLET</span>
                   </label>
+
                 </div>
 
                 <div className="flex-1 flex-col w-3/4">
 
-                  {/*  Credit Card */}
-                  <div>
-                    <div className="border-b pb-2 mb-4">
-                      <h2 className="text-lg font-semibold">CREDIT CARD INFO</h2>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="flex flex-col">
-                        <label className="mb-1" htmlFor="card-type">
-                          Card Type
-                        </label>
-                        <select id="card-type" className="p-2 border rounded-md focus:outline-none focus:border-blue-500">
-                          <option value="">-- Select Card Type --</option>
-                          <option value="visa">Visa</option>
-                          <option value="mastercard">MasterCard</option>
-                          <option value="amex">American Express</option>
-                        </select>
+                  {selectedPaymentMethod === 'credit-card' && (
+                    // Credit Card form
+                    <div>
+                      <div className="mb-4">
+                        <h2 className="text-2xl font-bold text-gray-700">CREDIT CARD INFO</h2>
+                        <hr className="border-b-2 border-blue-200 mt-2 mb-6"/>
                       </div>
-                      <div className="flex flex-col">
-                        <label className="mb-1" htmlFor="card-number">
-                          Card Number
-                        </label>
-                        <input id="card-number" type="text" className="p-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Card Number" />
-                      </div>
-                      <div className="flex flex-col col-span-2">
-                        <label className="mb-1" htmlFor="name-on-card">
-                          Name On Card
-                        </label>
-                        <input id="name-on-card" type="text" className="p-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Name On Card" />
-                      </div>
-                      <div className="flex flex-col">
-                        <label className="mb-1">Card Expiry Date</label>
-                        <div className="flex gap-2">
-                          <select id="expiry-month" className="p-2 border rounded-md focus:outline-none focus:border-blue-500">
-                            <option value="">Month</option>
-                            <option value="01">January</option>
-                            <option value="02">February</option>
-                            <option value="03">March</option>
-                            <option value="04">April</option>
-                            <option value="05">May</option>
-                            <option value="06">June</option>
-                            <option value="07">July</option>
-                            <option value="08">August</option>
-                            <option value="09">September</option>
-                            <option value="10">October</option>
-                            <option value="11">November</option>
-                            <option value="12">December</option>
-                          </select>
-                          <select id="expiry-year" className="p-2 border rounded-md focus:outline-none focus:border-blue-500">
-                            <option value="">Year</option>
-                            {
-                              Array.from({length: 100}, (_, i) => new Date().getFullYear() - 50 + i).map(year => 
-                                <option key={year} value={year}>{year}</option>
-                              )
-                            }
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="flex flex-col">
+                          <label className="mb-1" htmlFor="card-type">
+                            Card Type
+                          </label>
+                          <select id="card-type" className="p-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <option value="">-- Select Card Type --</option>
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">MasterCard</option>
+                            <option value="amex">American Express</option>
                           </select>
                         </div>
-                      </div>
-                      <div className="flex flex-col">
-                        <label className="mb-1" htmlFor="cvv">
-                          CVV Number
-                        </label>
-                        <input id="cvv" type="text" className="p-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="CVV Number" />
-                        <a className="text-xs text-blue-600" href="#">
-                          What is CVV number?
-                        </a>
-                      </div>
-                      <div className="col-span-2">
-                        <p className="text-xs italic">
-                          Note: In the next step you will be redirected to your bank's website to verify yourself.
-                        </p>
-                        <div className="mt-4 p-4 bg-blue-500 text-white text-center font-bold rounded-2xl hover:bg-blue-700 cursor-pointer">Donate Now</div>
+                        <div className="flex flex-col">
+                          <label className="mb-1" htmlFor="card-number">
+                            Card Number
+                          </label>
+                          <input id="card-number" type="text" className="p-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Card Number" />
+                        </div>
+                        <div className="flex flex-col col-span-2">
+                          <label className="mb-1" htmlFor="name-on-card">
+                            Name On Card
+                          </label>
+                          <input id="name-on-card" type="text" className="p-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Name On Card" />
+                        </div>
+                        <div className="flex flex-col">
+                          <label className="mb-1">Card Expiry Date</label>
+                          <div className="flex gap-2">
+                            <select id="expiry-month" className="p-2 border rounded-md focus:outline-none focus:border-blue-500">
+                              <option value="">Month</option>
+                              <option value="01">January</option>
+                              <option value="02">February</option>
+                              <option value="03">March</option>
+                              <option value="04">April</option>
+                              <option value="05">May</option>
+                              <option value="06">June</option>
+                              <option value="07">July</option>
+                              <option value="08">August</option>
+                              <option value="09">September</option>
+                              <option value="10">October</option>
+                              <option value="11">November</option>
+                              <option value="12">December</option>
+                            </select>
+                            <select id="expiry-year" className="p-2 border rounded-md focus:outline-none focus:border-blue-500">
+                              <option value="">Year</option>
+                              {
+                                Array.from({length: 100}, (_, i) => new Date().getFullYear() - 50 + i).map(year => 
+                                  <option key={year} value={year}>{year}</option>
+                                )
+                              }
+                            </select>
+                          </div>
+                        </div>
+                        <div className="flex flex-col">
+                          <label className="mb-1" htmlFor="cvv">
+                            CVV Number
+                          </label>
+                          <input id="cvv" type="text" className="p-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="CVV Number" />
+                          <a className="text-xs text-blue-600" href="#">
+                            What is CVV number?
+                          </a>
+                        </div>
+                        <div className="col-span-2">
+                          <p className="text-xs italic">
+                            Note: In the next step you will be redirected to your bank's website to verify yourself.
+                          </p>
+                          <div className="mt-4 p-4 bg-blue-500 text-white text-center font-bold rounded-2xl hover:bg-blue-700 cursor-pointer">Donate Now</div>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
 
-                  {/*  Debit Card */}
-                  <div>
-                    <div className="border-b pb-2 mb-4">
-                      <h2 className="text-lg font-semibold">DEBIT CARD INFO</h2>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="flex flex-col">
-                        <label className="mb-1" htmlFor="debit-card-type">
-                          Card Type
-                        </label>
-                        <select id="debit-card-type" className="p-2 border rounded-md focus:outline-none focus:border-blue-500">
-                          <option value="">-- Select Card Type --</option>
-                          <option value="visa">Visa</option>
-                          <option value="mastercard">MasterCard</option>
-                          <option value="amex">American Express</option>
-                        </select>
+                  {selectedPaymentMethod === 'debit-card' && (
+                    // Debit Card form
+                    <div>
+                      <div className="mb-4">
+                        <h2 className="text-2xl font-bold text-gray-700">DEBIT CARD INFO</h2>
+                        <hr className="border-b-2 border-blue-200 mt-2 mb-6"/>
                       </div>
-                      <div className="flex flex-col">
-                        <label className="mb-1" htmlFor="debit-card-number">
-                          Card Number
-                        </label>
-                        <input id="debit-card-number" type="text" className="p-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Card Number" />
-                      </div>
-                      <div className="flex flex-col col-span-2">
-                        <label className="mb-1" htmlFor="debit-name-on-card">
-                          Name On Card
-                        </label>
-                        <input id="debit-name-on-card" type="text" className="p-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Name On Card" />
-                      </div>
-                      <div className="flex flex-col">
-                        <label className="mb-1">Card Expiry Date</label>
-                        <div className="flex gap-2">
-                          <select id="debit-expiry-month" className="p-2 border rounded-md focus:outline-none focus:border-blue-500">
-                            <option value="">Month</option>
-                            <option value="01">January</option>
-                            <option value="02">February</option>
-                            <option value="03">March</option>
-                            <option value="04">April</option>
-                            <option value="05">May</option>
-                            <option value="06">June</option>
-                            <option value="07">July</option>
-                            <option value="08">August</option>
-                            <option value="09">September</option>
-                            <option value="10">October</option>
-                            <option value="11">November</option>
-                            <option value="12">December</option>
-                          </select>
-                          <select id="debit-expiry-year" className="p-2 border rounded-md focus:outline-none focus:border-blue-500">
-                            <option value="">Year</option>
-                            {Array.from({ length: 100 }, (_, i) => new Date().getFullYear() - 50 + i).map((year) => (
-                              <option key={year} value={year}>{year}</option>
-                            ))}
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="flex flex-col">
+                          <label className="mb-1" htmlFor="debit-card-type">
+                            Card Type
+                          </label>
+                          <select id="debit-card-type" className="p-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <option value="">-- Select Card Type --</option>
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">MasterCard</option>
+                            <option value="amex">American Express</option>
                           </select>
                         </div>
+                        <div className="flex flex-col">
+                          <label className="mb-1" htmlFor="debit-card-number">
+                            Card Number
+                          </label>
+                          <input id="debit-card-number" type="text" className="p-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Card Number" />
+                        </div>
+                        <div className="flex flex-col col-span-2">
+                          <label className="mb-1" htmlFor="debit-name-on-card">
+                            Name On Card
+                          </label>
+                          <input id="debit-name-on-card" type="text" className="p-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Name On Card" />
+                        </div>
+                        <div className="flex flex-col">
+                          <label className="mb-1">Card Expiry Date</label>
+                          <div className="flex gap-2">
+                            <select id="debit-expiry-month" className="p-2 border rounded-md focus:outline-none focus:border-blue-500">
+                              <option value="">Month</option>
+                              <option value="01">January</option>
+                              <option value="02">February</option>
+                              <option value="03">March</option>
+                              <option value="04">April</option>
+                              <option value="05">May</option>
+                              <option value="06">June</option>
+                              <option value="07">July</option>
+                              <option value="08">August</option>
+                              <option value="09">September</option>
+                              <option value="10">October</option>
+                              <option value="11">November</option>
+                              <option value="12">December</option>
+                            </select>
+                            <select id="debit-expiry-year" className="p-2 border rounded-md focus:outline-none focus:border-blue-500">
+                              <option value="">Year</option>
+                              {Array.from({ length: 100 }, (_, i) => new Date().getFullYear() - 50 + i).map((year) => (
+                                <option key={year} value={year}>{year}</option>
+                              ))}
+                            </select>
+                          </div>
+                        </div>
+                        <div className="flex flex-col">
+                          <label className="mb-1" htmlFor="debit-cvv">
+                            CVV Number
+                          </label>
+                          <input id="debit-cvv" type="text" className="p-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="CVV Number" />
+                          <a className="text-xs text-blue-600" href="#">
+                            What is CVV number?
+                          </a>
+                        </div>
+                        <div className="col-span-2">
+                          <p className="text-xs italic">
+                            Note: In the next step you will be redirected to your bank's website to verify yourself.
+                          </p>
+                          <div className="mt-4 p-4 bg-blue-500 text-white text-center font-bold rounded-2xl hover:bg-blue-700 cursor-pointer">Donate Now</div>
+                        </div>
                       </div>
-                      <div className="flex flex-col">
-                        <label className="mb-1" htmlFor="debit-cvv">
-                          CVV Number
+                    </div>
+                  )}
+
+                  {selectedPaymentMethod === 'net-banking' && (
+                    // Net Banking form
+                    <div className="bg-white rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+                      <div className="mb-4">
+                        <h2 className="text-2xl font-bold text-gray-700">NET BANKING</h2>
+                        <hr className="border-b-2 border-blue-200 mt-2 mb-6"/>
+                      </div>
+                      <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="bank-name">
+                          Select Bank
                         </label>
-                        <input id="debit-cvv" type="text" className="p-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="CVV Number" />
-                        <a className="text-xs text-blue-600" href="#">
-                          What is CVV number?
-                        </a>
+                        <select id="bank-name" className="p-2 border rounded-md focus:outline-none focus:border-blue-500">
+                          <option value="">-- Select Bank --</option>
+                          <option value="sbi">State Bank of India</option>
+                          <option value="icici">ICICI Bank</option>
+                          <option value="hdfc">HDFC Bank</option>
+                          <option value="axis">Axis Bank</option>
+                          <option value="kotak">Kotak Mahindra Bank</option>
+                          <option value="canara">Canara Bank</option>
+                          <option value="pnb">Punjab National Bank</option>
+                          <option value="boi">Bank of India</option>
+                          <option value="bob">Bank of Baroda</option>
+                          <option value="idbi">IDBI Bank</option>
+                        </select>
+
                       </div>
+                      
                       <div className="col-span-2">
                         <p className="text-xs italic">
                           Note: In the next step you will be redirected to your bank's website to verify yourself.
@@ -376,8 +426,8 @@ const DonationForm = () => {
                         <div className="mt-4 p-4 bg-blue-500 text-white text-center font-bold rounded-2xl hover:bg-blue-700 cursor-pointer">Donate Now</div>
                       </div>
                     </div>
-                  </div>
-                  
+                  )}
+
                 </div>
               </div>
             </div>
