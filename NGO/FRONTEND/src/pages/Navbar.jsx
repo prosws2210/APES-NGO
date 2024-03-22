@@ -30,7 +30,7 @@ const Navbar = () => {
               <div className="absolute z-10 mt-2 space-y-2 p-2 bg-white rounded-xl backdrop-blur-md shadow-lg w-40 border-2 border-black">
                 <Link to="http://localhost:1001/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900">HEALTHCARE</Link>
                 <Link to="http://localhost:1002/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900">EDUCATION</Link>
-                <Link to="http://localhost:1003/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900">DIETARY</Link>
+                <Link to="http://localhost:1003/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900">DIETARY CARE</Link>
                 <Link to="http://localhost:1004/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900">SOCIAL CAUSE</Link>
               </div>
             )}
@@ -51,7 +51,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/donation">
               <button className="rounded-full px-4 py-2 bg-yellow-400 text-sm font-medium text-black-700 transform hover:scale-110 transition-transform duration-200">              
-                DONATE 🤍
+                DONATE ❤
               </button>
             </Link>
           </div>
