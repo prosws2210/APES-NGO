@@ -3,17 +3,21 @@ import 'tailwindcss/tailwind.css';
 
 const About_Gallery = () => {
   const images = [
-    "/assets/images/gallery/gallery_01.jpg",
-    "/assets/images/gallery/gallery_02.jpg",
-    "/assets/images/gallery/gallery_03.jpg",
-    "/assets/images/gallery/gallery_04.jpg",
-    "/assets/images/gallery/gallery_05.jpg",
-    "/assets/images/gallery/gallery_06.jpg",
-    "/assets/images/gallery/gallery_08.jpg",
-    "/assets/images/gallery/gallery_09.jpg",
-    "/assets/images/gallery/gallery_10.jpg",
-    "/assets/images/gallery/gallery_11.jpg",
-    "/assets/images/gallery/gallery_12.jpg",   
+    "/assets/images/poverty images/image_1.jpg",
+    "/assets/images/poverty images/image_2.jpg",
+    "/assets/images/poverty images/image_3.jpg",
+    "/assets/images/poverty images/image_14.jpg",
+    "/assets/images/poverty images/image_8.jpg",
+    "/assets/images/poverty images/image_9.jpg",
+    "/assets/images/poverty images/image_5.jpg",
+    "/assets/images/poverty images/image_6.jpg",
+    "/assets/images/poverty images/image_8.jpg",
+    "/assets/images/poverty images/image_9.jpg",
+    "/assets/images/poverty images/image_10.jpg",
+    "/assets/images/poverty images/image_11.jpg",
+    "/assets/images/poverty images/image_12.jpg",   
+    "/assets/images/poverty images/image_6.jpg",
+    "/assets/images/poverty images/image_10.jpg",
   ];
 
   return (
@@ -23,7 +27,7 @@ const About_Gallery = () => {
       </div>
       <div className="max-w-8xl py-6 mx-auto grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-auto grid-flow-dense">
         {images.map((image, index) => ( 
-          <div key={index} className={index % 2 === 0 ? "row-span-2" : index % 3 === 0 ? "col-span-2" : ""}>
+          <div key={index} className={index % 2 === 0 ? "row-span-3" : index % 3 === 0 ? "col-span-2" : ""}>
             <img 
               src={image} 
               alt="" 

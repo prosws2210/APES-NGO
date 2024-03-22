@@ -5,21 +5,16 @@ import { Link } from 'react-router-dom';
 const HomeMain = () => {
   return (
     <div className='bg-violet-50 flex flex-col items-center justify-center py-8 px-20'>
-      <h1 className='text-5xl font-bold text-black pb-8'>WELCOME TO IMPROVEMENT IN SOCIAL CAUSE</h1>
-      <div className="flex flex-row gap-10 items-center justify-center">
+      <h1 className='text-5xl font-serif font-bold text-black pt-8 pb-16'>WELCOME TO IMPROVEMENT IN SOCIAL CAUSES</h1>      <div className="flex flex-row gap-10 items-center justify-center">
         {/* Image div */}
-        <div className="relative mb-4">
-          <div className="absolute -inset-1 bg-[#00a2ff] rounded-full blur opacity-50" />
+        <div className="relative mb-8">
+          <div className="absolute -inset-1 bg-[#95ff00] rounded-full blur opacity-50" />
           <img
             alt="Child smiling"
-            className="relative w-80 h-80 rounded-full border-4 border-white"
-            height="128"
-            src="/placeholder.svg"
-            style={{
-              aspectRatio: "128/128",
-              objectFit: "cover",
-            }}
-            width="128"
+            className="relative rounded-full border-4 border-white"
+            height="2800"
+            src="/assets/images/poverty images/image_19.jpg"
+            width="2800"
           />
         </div>
 
