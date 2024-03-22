@@ -11,9 +11,9 @@ const Navbar = () => {
 
   return (
     <div className="shadow-2xl" style={boxShadowStyle}>
-      <div className="flex justify-between px-20 py-2 z-10" onMouseLeave={() => setIsOpen(false)}>
+      <div className="flex justify-between items-center px-20 py-2 z-10" onMouseLeave={() => setIsOpen(false)}>
         <div> 
-          <img src="/assets/images/logo.jpg" alt="" className="h-12" loading="lazy" />
+          <img src="/assets/images/Logo.png" alt="" className="h-12" loading="lazy" />
         </div>
 
         <div className="flex text-sm gap-20 font-bold items-center">

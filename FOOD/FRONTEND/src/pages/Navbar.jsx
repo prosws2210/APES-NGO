@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="flex justify-between gap-32 px-20 py-2 z-10 text-sm font-bold items-center" onMouseLeave={() => setIsOpen(false)}>
         <div> 
           <Link to="http://localhost:2000/">
-            <img src="/assets/images/jipmer-mbbs.jpg" alt="" className="h-12" loading="lazy" />
+            <img src="/assets/images/Logo_Food.png" alt="" className="h-12" loading="lazy" />
           </Link>
         </div>
 
