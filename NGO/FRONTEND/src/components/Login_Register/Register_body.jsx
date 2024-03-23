@@ -155,7 +155,7 @@ const Register_body = () => {
                                    (isStaff) ? 'bg-indigo-700 text-white' : 'bg-neutral-500 text-white'
                                 }`}
                             >
-                                Staff
+                                Volunteer
                             </button>
 
                             <button
@@ -164,7 +164,7 @@ const Register_body = () => {
                                     (!isStaff) ? 'bg-indigo-700 text-white' : 'bg-neutral-500 text-white'
                                 }`}
                             >
-                                Patient
+                                Community
                             </button>
                         </div>
 
@@ -432,7 +432,7 @@ const Register_body = () => {
                                                 <h1 className="text-2xl font-bold text-black mb-8">STAFF INFORMATION</h1>
                                                 <div className="grid grid-cols-3 gap-8 mt-8 mb-10">
                                                     <div>
-                                                        <label htmlFor="staff-id" className="block text-gray-700 font-bold mb-2">Staff ID</label>
+                                                        <label htmlFor="staff-id" className="block text-gray-700 font-bold mb-2">Volunteer ID</label>
                                                         <input
                                                             id="staff-id"
                                                             name="staff-id"
@@ -440,50 +440,59 @@ const Register_body = () => {
                                                             autoComplete="off"
                                                             required
                                                             className="appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                                                            placeholder="Staff ID"
+                                                            placeholder="Volunteer ID"
                                                             onChange={(e)=>{setStaffID(e.target.value)}}
                                                         />
                                                     </div>
 
                                                     <div>
-                                                        <label htmlFor="department-name" className="block text-gray-700 font-bold mb-2">Department Name</label>
+                                                        <label htmlFor="state-name" className="block text-gray-700 font-bold mb-2">State</label>
                                                         <select
-                                                            id="department-name"
-                                                            name="department-name"
+                                                            id="state-name"
+                                                            name="state-name"
                                                             value={deptGroup}
                                                             className="appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                                                            onChange={(e)=>{setDeptGroup(e.target.value)}}                            
+                                                            onChange={(e) => { setDeptGroup(e.target.value) }}
                                                         >
-                                                            <option value="" className="text-gray-700" disabled><strong>Select Department Name</strong></option>
-                                                            {[
-                                                                "Cardiology",
-                                                                "Dentistry",
-                                                                "Dermatology",
-                                                                "ENT",
-                                                                "Endocrinology",
-                                                                "Gastroenterology",
-                                                                "Gynecology",
-                                                                "Nephrology",
-                                                                "Neurology",
-                                                                "Neurosurgery",
-                                                                "Oncology",
-                                                                "Ophthalmology",
-                                                                "Orthopaedic",
-                                                                "Pediatrics",
-                                                                "Plastic Surgery",
-                                                                "Psychiatry",
-                                                                "Pulmonology",
-                                                                "Radiology",
-                                                                "Rheumatology",
-                                                                "Urology",
-                                                                "Vascular Surgery",
-                                                            ].map((group) => (
-                                                                <option key={group} value={group}>{group}</option>
-                                                            ))}
+                                                            <option value="" className="text-gray-700" disabled><strong>Select State</strong></option>
+                                                            {
+                                                                [
+                                                                    "Andhra Pradesh",
+                                                                    "Arunachal Pradesh",
+                                                                    "Assam",
+                                                                    "Bihar",
+                                                                    "Chhattisgarh",
+                                                                    "Goa",
+                                                                    "Gujarat",
+                                                                    "Haryana",
+                                                                    "Himachal Pradesh",
+                                                                    "Jharkhand",
+                                                                    "Karnataka",
+                                                                    "Kerala",
+                                                                    "Madhya Pradesh",
+                                                                    "Maharashtra",
+                                                                    "Manipur",
+                                                                    "Meghalaya",
+                                                                    "Mizoram",
+                                                                    "Nagaland",
+                                                                    "Odisha",
+                                                                    "Punjab",
+                                                                    "Rajasthan",
+                                                                    "Sikkim",
+                                                                    "Tamil Nadu",
+                                                                    "Telangana",
+                                                                    "Tripura",
+                                                                    "Uttar Pradesh",
+                                                                    "Uttarakhand",
+                                                                    "West Bengal"
+                                                                ].map((state) => (
+                                                                    <option key={state} value={state}>{state}</option>
+                                                                ))
+                                                            }
                                                         </select>
                                                     </div>
 
-                                                    <div>
+                                                    {/* <div>
                                                         <label htmlFor="education" className="block text-gray-700 font-bold mb-2">Education</label>
                                                         <input
                                                             id="education"
@@ -496,9 +505,9 @@ const Register_body = () => {
                                                             placeholder="Education (max 60 characters)"
                                                             onChange={(e)=>{setEducation(e.target.value)}}
                                                         />
-                                                    </div>
+                                                    </div> */}
 
-                                                    <div>
+                                                    {/* <div>
                                                         <label htmlFor="experience" className="block text-gray-700 font-bold mb-2">Experience</label>
                                                         <input
                                                             id="experience"
@@ -511,7 +520,7 @@ const Register_body = () => {
                                                             placeholder="Experience (max 40 characters)"
                                                             onChange={(e)=>{setExperience(e.target.value)}}
                                                         />
-                                                    </div>
+                                                    </div> */}
 
                                                     <div>
                                                         <label htmlFor="language" className="block text-gray-700 font-bold mb-2">Language</label>
@@ -527,7 +536,7 @@ const Register_body = () => {
                                                         />
                                                     </div>
 
-                                                    <div>
+                                                    {/* <div>
                                                         <label htmlFor="timing" className="block text-gray-700 font-bold mb-2">Timing</label>
                                                         <input
                                                             id="timing"
@@ -539,7 +548,7 @@ const Register_body = () => {
                                                             placeholder="Timing : (eg: Mon-Sat 09:00-12:00 14:00-18:00)"
                                                             onChange={(e)=>{setTiming(e.target.value)}}
                                                         />
-                                                    </div>
+                                                    </div> */}
                                                 </div>
                                             </div>
                                         )}
