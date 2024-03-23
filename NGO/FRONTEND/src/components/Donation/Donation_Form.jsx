@@ -433,6 +433,38 @@ const DonationForm = () => {
             </div>
           </div>
         )} 
+
+        {/* STEP 3 */}
+        {step === 3 && (
+          <div>
+            <div className="bg-white p-6 rounded-lg">
+              <div className="flex justify-between items-center">
+                <h1 className="text-xl font-semibold">DONATION SUMMARY</h1>
+                <span>Transaction ID : {Math.floor(Math.random() * 1000000)}</span>
+              </div>
+              <div className="mt-4">
+                <span className="font-medium">Amount : Rs {selectedAmount}/- </span>
+              </div>
+              <div className="mt-4">
+                <span className="font-medium">Payment Method : {selectedPaymentMethod} </span>
+              </div>
+              <div className="mt-4">
+                <span className="font-medium">Children Fed : {childrenFed} </span>
+              </div>
+              <div className="mt-4 flex flex-row gap justify-center gap-7 items-center">
+                <div>
+                  <span className="text-3xl font-semibold">Thank you for your donation! </span>
+                </div>
+                <div className="">
+                  <img src="assets/images/umeed_homepg/tick.jpg" alt="Thank you for your donation" className="w-16 rounded-lg" />
+                </div>
+              </div>
+            </div>
+
+            {/* Add a image */}
+            
+          </div>
+        )}
         
 
       </div>

@@ -9,7 +9,7 @@ const partners = [
 
 const Home_Partner = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12 flex justify-center items-center">
+    <div className="mx-auto bg-violet-50 px-4 py-12 flex justify-center items-center">
       <div className="text-center">
         <h2 className="text-3xl font-bold mb-8">OUR PARTNERS</h2>
         <div className="flex space-x-24">

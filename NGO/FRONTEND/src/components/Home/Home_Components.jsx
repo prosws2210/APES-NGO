@@ -17,31 +17,31 @@ const Box = ({ imgSrc, altText, title, description }) => {
 const Home_Components = () => {
   const keyFeaturesData = [
     {
-      imgSrc: "assets\\images\\Key features\\healthcare.jpg",
+      imgSrc: "assets\\images\\umeed_homepg\\homepg_umeed_health.png",
       altText: "Health Care Icon",
       title: "HEALTHCARE",
       description: "Innovative tech for effective treatments, leading medical breakthroughs, and improved patient outcomes."
     },
     {
-      imgSrc: "assets\\images\\Key features\\education.webp",
+      imgSrc: "assets\\images\\umeed_homepg\\homepg_umeed_education.jpg",
       altText: "Education Icon",
       title: "EDUCATION",
       description: "Experienced doctors offer high-standard care, empowering patients with knowledge for informed healthcare decisions."
     },
     {
-      imgSrc: "assets\\images\\Key features\\food.png",
+      imgSrc: "assets\\images\\umeed_homepg\\homepg_umeed_food.jpeg",
       altText: "Food Icon",
       title: "FOOD",
       description: "Personalized treatment plans ensure high patient satisfaction, exceeding expectations for positive health outcomes."
     },
     {
-      imgSrc: "assets\\images\\Key features\\social.jpg",
+      imgSrc: "assets\\images\\umeed_homepg\\homepg_umeed_social(1).png",
       altText: "Social Cause Icon",
       title: "SOCIAL CAUSE",
       description: "Diverse pharma pipeline aims to transform patient lives through innovative treatments and scientific advancements."
     },
     {
-      imgSrc: "assets\\images\\Key features\\event.jpg",
+      imgSrc: "assets\\images\\umeed_homepg\\homepg.jpeg",
       altText: "Events Icon",
       title: "EVENTS",
       description: "Multidisciplinary pharma team dedicated to delivering safe and effective healthcare solutions for patient benefit."
