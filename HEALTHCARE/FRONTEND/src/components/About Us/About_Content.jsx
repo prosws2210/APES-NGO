@@ -16,10 +16,10 @@ const About_Content = () => {
       </div>
 
       {/* Text on the right */}
-      <div className="max-w">
-        <h2 className="text-2xl font-bold mb-4">Welcome to JIPMER - Advancing Healthcare Excellence</h2>
+      <div className="max-w font-semibold">
+        <h2 className="text-2xl font-bold mb-4">Welcome to UMEED - Advancing Healthcare Excellence</h2>
         <p className="text-gray-700">
-          JIPMER, a pioneer in medical education, stands as a beacon of quality healthcare and academic brilliance.
+          UMEED - HEALTHCARE, a pioneer in medical education, stands as a beacon of quality healthcare and academic brilliance.
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida.
           Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.
         </p>
@@ -32,7 +32,7 @@ const About_Content = () => {
         </p>
 
         <p className="mt-4 text-gray-700">
-          With a rich heritage and a focus on nurturing the next generation of healthcare leaders, JIPMER continues to
+          With a rich heritage and a focus on nurturing the next generation of healthcare leaders, UMEED - HEALTHCARE continues to
           be a hub for academic excellence and innovative medical research. Lorem ipsum dolor sit amet, consectetur
           adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin
           pulvinar. Suspendisse hendrerit ultrices mauris. Fusce tristique lacus at urna sollicitudin pulvinar.
